@@ -37,6 +37,7 @@ function ValidateSelectValue(el, val_to_check) {
   $$(el).each(function(el){
     if(el.value == val_to_check)
     {
+        alert(el.value + val_to_check)
         exists = true;
         throw $break;
      }
