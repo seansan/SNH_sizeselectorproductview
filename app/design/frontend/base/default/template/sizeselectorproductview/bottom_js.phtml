@@ -9,13 +9,15 @@ $$(el).each(function(select_element) {
 
 
 function SetSelect(el, stored_el_val) {
-    if (stored_el_val) {
+    if (stored_el_val && ValidateSelectValue(el, stored_el_val)) {
         try {
             $(el).value = stored_el_val;
             $(el).simulate('change');
         } 
         catch (e) { 
         }
+    } else {
+        return;
     }
 }
 
@@ -29,6 +31,18 @@ function Setstored_el_val(obj) {
 $$(el).each(function(select) {
     Event.observe(select, 'change', function() { Setstored_el_val($(this)) });
 });
+
+function ValidateSelectValue(el, val_to_check) {
+  var exists = false;
+  $$(el).each(function(el){
+    if(el.value == val_to_check)
+    {
+        exists = true;
+        throw $break;
+     }
+  });
+  return exists;
+}
 
 function setCookie(cname, cvalue) {
     var d = new Date();
