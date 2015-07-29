@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<config>
+    <modules>
+        <SNH_SizeSelectorProductView>
+            <version>0.1.0</version>
+        </SNH_SizeSelectorProductView>
+    </modules> 
+
+    <frontend>
+        <layout>
+            <updates>
+                <sizeselectorproductview>
+                    <file>sizeselectorproductview.xml</file>
+                </sizeselectorproductview>
+            </updates>
+        </layout>
+    </frontend>
+</config>
