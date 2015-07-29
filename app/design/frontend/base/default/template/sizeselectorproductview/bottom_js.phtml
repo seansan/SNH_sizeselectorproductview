@@ -9,15 +9,14 @@ $$(el).each(function(select_element) {
 
 
 function SetSelect(el, stored_el_val) {
-    if (stored_el_val && ValidateSelectValue(el, stored_el_val)) {
+    option_el = "#" + el + " option[value="+stored_el_val+"]";
+    if ($(el) && ($$(option_el).length > 0)) {
         try {
             $(el).value = stored_el_val;
             $(el).simulate('change');
         } 
         catch (e) { 
         }
-    } else {
-        return;
     }
 }
 
@@ -34,10 +33,10 @@ $$(el).each(function(select) {
 
 function ValidateSelectValue(el, val_to_check) {
   var exists = false;
-  $$(el).each(function(el){
-    if(el.value == val_to_check)
+  $$(el).each(function(select){
+    if(select.value == val_to_check)
     {
-        alert(el.value + val_to_check)
+        alert(select.value + val_to_check);
         exists = true;
         throw $break;
      }
