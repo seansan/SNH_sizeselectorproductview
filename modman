@@ -1,5 +1,5 @@
 # SNH_sizeselectorproductview
-app/code/community/SNH/SizeSelectorProductView/*    app/code/community/SNH/SizeSelectorProductView/
+app/code/local/SNH/SizeSelectorProductView/*        app/code/local/SNH/SizeSelectorProductView/
 app/etc/modules/*                                   app/etc/modules/
 app/design/frontend/base/default/layout/*           app/design/frontend/base/default/layout/
 app/design/frontend/base/default/template/*         app/design/frontend/base/default/template/
